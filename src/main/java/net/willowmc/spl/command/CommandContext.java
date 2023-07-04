@@ -1,4 +1,4 @@
-package net.mcaurora.spl.command;
+package net.willowmc.spl.command;
 
 import org.bukkit.command.CommandSender;
 

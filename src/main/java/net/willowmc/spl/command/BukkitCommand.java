@@ -1,7 +1,7 @@
-package net.mcaurora.spl.command;
+package net.willowmc.spl.command;
 
-import net.mcaurora.spl.SimplePluginLibrary;
-import net.mcaurora.spl.command.completion.TabCompletionParser;
+import net.willowmc.spl.SimplePluginLibrary;
+import net.willowmc.spl.command.completion.TabCompletionParser;
 import org.bukkit.command.Command;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
@@ -19,9 +19,9 @@ import java.util.List;
  * Command Executor for SPL Commands.
  */
 public class BukkitCommand implements CommandExecutor, TabCompleter {
-    private final net.mcaurora.spl.command.Command command;
+    private final net.willowmc.spl.command.Command command;
 
-    protected BukkitCommand(net.mcaurora.spl.command.Command command) {
+    protected BukkitCommand(net.willowmc.spl.command.Command command) {
         this.command = command;
     }
 

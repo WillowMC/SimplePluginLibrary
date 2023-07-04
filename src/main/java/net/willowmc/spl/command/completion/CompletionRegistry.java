@@ -1,4 +1,4 @@
-package net.mcaurora.spl.command.completion;
+package net.willowmc.spl.command.completion;
 
 import lombok.experimental.UtilityClass;
 import org.bukkit.entity.Player;

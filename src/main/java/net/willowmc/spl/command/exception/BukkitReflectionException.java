@@ -1,4 +1,4 @@
-package net.mcaurora.spl.command.exception;
+package net.willowmc.spl.command.exception;
 
 /**
  * Thrown if interactions with Bukkit hidden fields fails.

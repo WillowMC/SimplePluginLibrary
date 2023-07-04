@@ -1,4 +1,4 @@
-package net.mcaurora.spl.event;
+package net.willowmc.spl.event;
 
 /**
  * WIP

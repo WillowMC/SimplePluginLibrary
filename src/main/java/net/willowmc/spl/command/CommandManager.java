@@ -1,7 +1,7 @@
-package net.mcaurora.spl.command;
+package net.willowmc.spl.command;
 
-import net.mcaurora.spl.SimplePluginLibrary;
-import net.mcaurora.spl.command.exception.BukkitReflectionException;
+import net.willowmc.spl.SimplePluginLibrary;
+import net.willowmc.spl.command.exception.BukkitReflectionException;
 import org.bukkit.command.CommandMap;
 import org.bukkit.plugin.SimplePluginManager;
 

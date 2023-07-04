@@ -1,4 +1,4 @@
-package net.mcaurora.spl.command;
+package net.willowmc.spl.command;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

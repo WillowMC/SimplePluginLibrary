@@ -1,9 +1,9 @@
-package net.mcaurora.spl;
+package net.willowmc.spl;
 
 import lombok.Getter;
-import net.mcaurora.spl.command.Command;
-import net.mcaurora.spl.command.CommandManager;
-import net.mcaurora.spl.permission.PermissionManager;
+import net.willowmc.spl.command.Command;
+import net.willowmc.spl.command.CommandManager;
+import net.willowmc.spl.permission.PermissionManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SimplePluginLibrary {

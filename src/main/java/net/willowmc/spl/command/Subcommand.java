@@ -1,8 +1,8 @@
-package net.mcaurora.spl.command;
+package net.willowmc.spl.command;
 
 import lombok.Getter;
-import net.mcaurora.spl.SimplePluginLibrary;
-import net.mcaurora.spl.command.completion.TabCompletionParser;
+import net.willowmc.spl.SimplePluginLibrary;
+import net.willowmc.spl.command.completion.TabCompletionParser;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package net.mcaurora.spl.util;
+package net.willowmc.spl.util;
 
 import lombok.experimental.UtilityClass;
 

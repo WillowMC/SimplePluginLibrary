@@ -1,11 +1,11 @@
-package net.mcaurora.spl.command;
+package net.willowmc.spl.command;
 
 import lombok.Getter;
 import lombok.Setter;
-import net.mcaurora.spl.SimplePluginLibrary;
-import net.mcaurora.spl.command.exception.DuplicateCommandException;
-import net.mcaurora.spl.command.exception.HookCommandException;
-import net.mcaurora.spl.util.EnumHelper;
+import net.willowmc.spl.SimplePluginLibrary;
+import net.willowmc.spl.command.exception.DuplicateCommandException;
+import net.willowmc.spl.command.exception.HookCommandException;
+import net.willowmc.spl.util.EnumHelper;
 import org.bukkit.command.PluginCommand;
 import org.jetbrains.annotations.NotNull;
 

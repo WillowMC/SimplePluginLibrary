@@ -1,4 +1,4 @@
-package net.mcaurora.spl.permission;
+package net.willowmc.spl.permission;
 
 import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.PluginManager;

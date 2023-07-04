@@ -1,6 +1,6 @@
-package net.mcaurora.spl.command.exception;
+package net.willowmc.spl.command.exception;
 
-import net.mcaurora.spl.command.Command;
+import net.willowmc.spl.command.Command;
 
 /**
  * Thrown if a command can not be registered with Bukkit.
