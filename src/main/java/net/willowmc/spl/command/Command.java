@@ -151,7 +151,7 @@ public abstract class Command {
      * @return argument value (null if none)
      */
     public static String getArg(CommandContext ctx, int index) {
-        if (ctx.args().length < index) return null;
+        if (ctx.args().length < index + 1) return null;
         return ctx.args()[index];
     }
 
