@@ -6,6 +6,7 @@ import net.willowmc.spl.command.CommandManager;
 import net.willowmc.spl.command.completion.CompletionRegistry;
 import net.willowmc.spl.config.Config;
 import net.willowmc.spl.config.ConfigManager;
+import net.willowmc.spl.feature.Feature;
 import net.willowmc.spl.impl.commands.ReloadCommand;
 import net.willowmc.spl.permission.PermissionManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,15 +26,21 @@ public class SimplePluginLibrary {
     @Getter
     private final CommandManager cmd;
 
-    public SimplePluginLibrary(JavaPlugin plugin, Command[] commands, Config... configs) {
+    public SimplePluginLibrary(JavaPlugin plugin, Feature[] features, Config... configs) {
         this.plugin = plugin;
         this.perm = new PermissionManager(plugin);
         this.cfg = new ConfigManager(plugin);
         this.cfg.registerAll(configs);
         this.cfg.init();
 
+        List<Command> cmd = new ArrayList<>();
+
+        for (Feature f : features) {
+            if (f.test(0)) cmd.add(f.command());
+            if (f.test(1)) f.listener().init(plugin);
+        }
+
         CompletionRegistry.register("config-name", p -> this.cfg.getConfigNames());
-        List<Command> cmd = new ArrayList<>(List.of(commands));
         cmd.add(new ReloadCommand());
 
         this.cmd = new CommandManager(cmd.toArray(new Command[0]), this);

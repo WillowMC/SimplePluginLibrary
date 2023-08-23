@@ -2,12 +2,12 @@
 
 ## THIS PROJECT IS WORK IN PROGRESS
 
-> (~40% complete), Example: https://github.com/WillowMC/SPLExample
+> (~60% complete), Example: https://github.com/WillowMC/SPLExample
 
 ## Planned
 
-- Simple Event Registering
 - Simple Tools (left-click/right-click actions)
+- Simple Docs
 
 ## Not Planned
 
