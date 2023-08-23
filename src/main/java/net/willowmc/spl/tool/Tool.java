@@ -196,7 +196,7 @@ public class Tool {
         if (meta == null) return null;
         PersistentDataContainer pdata = meta.getPersistentDataContainer();
         Integer tid = pdata.get(new NamespacedKey(this.plugin, ToolManager.getIdKey()), PersistentDataType.INTEGER);
-        if (tid == null || tid != this.id || this.data.containsKey(key)) return null;
+        if (tid == null || tid != this.id || !this.data.containsKey(key)) return null;
         String data = pdata.get(new NamespacedKey(this.plugin, key.hashCode() + ""), PersistentDataType.STRING);
         if (data == null) return (T) this.data.get(key).data();
         return type.fromData(ToolEncryption.decrypt(data));
