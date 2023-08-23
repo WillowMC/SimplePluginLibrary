@@ -11,13 +11,4 @@ import net.willowmc.spl.event.Listener;
  * @param listener listener
  */
 public record Feature(byte state, Command command, Listener listener) {
-    /**
-     * Test a bit in the state variable
-     *
-     * @param i index of the bit
-     * @return state of the bit (set/not set)
-     */
-    public boolean test(int i) {
-        return state << ~i < 0;
-    }
 }
