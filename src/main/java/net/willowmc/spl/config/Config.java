@@ -80,8 +80,8 @@ public class Config extends YamlConfiguration {
      * @param path YAML Path
      * @return Formatted String
      */
-    public String getStringFormatted(String path) {
-        return ChatColor.translateAlternateColorCodes('&', this.complete(this.getString(path, "")));
+    public String getStringFormatted(String path, String... args) {
+        return ChatColor.translateAlternateColorCodes('&', this.complete(this.getString(path, ""), args));
     }
 
     /**
@@ -90,9 +90,13 @@ public class Config extends YamlConfiguration {
      * @param toComplete string to complete
      * @return completed string
      */
-    private String complete(String toComplete) {
+    private String complete(String toComplete, String... args) {
+        int i = 0;
         for (ConfigCompletion c : this.completions) {
-            toComplete = toComplete.replaceAll("%" + c.name() + "%", c.function().get());
+            String arg = "";
+            if (args.length > i) arg = args[i];
+            i++;
+            toComplete = toComplete.replaceAll("%" + c.name() + "%", c.function().apply(arg));
         }
         return toComplete;
     }
