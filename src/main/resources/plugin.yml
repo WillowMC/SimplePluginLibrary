@@ -1,0 +1,6 @@
+name: SimplePluginLibrary
+version: '${project.version}'
+main: net.willowmc.spl.SPLPlugin
+api-version: 1.20
+authors: [ jesus_is_hot ]
+description: Plugin Library for Spigot

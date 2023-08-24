@@ -49,7 +49,7 @@ public class SimplePluginLibrary {
         new ToolListener(this.tm).init(plugin);
 
         CompletionRegistry.register("config-name", p -> this.cfg.getConfigNames());
-        cmd.add(new ReloadCommand());
+        cmd.add(new ReloadCommand(plugin));
 
         this.cmd = new CommandManager(cmd.toArray(new Command[0]), this);
 

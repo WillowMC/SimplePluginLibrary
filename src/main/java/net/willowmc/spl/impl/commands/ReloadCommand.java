@@ -5,12 +5,24 @@ import net.willowmc.spl.command.Command;
 import net.willowmc.spl.command.CommandContext;
 import net.willowmc.spl.command.CommandData;
 import net.willowmc.spl.config.Config;
+import org.bukkit.plugin.Plugin;
 
 /**
  * Config reload command.
  */
 @CommandData(name = "reload", description = "Reload plugin configs.", completion = "config-name")
 public class ReloadCommand extends Command {
+    private Plugin plugin;
+
+    public ReloadCommand(Plugin plugin) {
+        this.plugin = plugin;
+    }
+
+    @Override
+    public String getName() {
+        return plugin.getName().toLowerCase() + "_" + super.getName();
+    }
+
     @Override
     protected boolean doCommand(CommandContext ctx) {
         SimplePluginLibrary spl = SimplePluginLibrary.getInstance();
