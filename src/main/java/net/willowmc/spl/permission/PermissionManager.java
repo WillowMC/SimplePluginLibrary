@@ -1,6 +1,7 @@
 package net.willowmc.spl.permission;
 
 import org.bukkit.permissions.Permission;
+import org.bukkit.permissions.PermissionDefault;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,6 +22,8 @@ public class PermissionManager {
      * @param description permission description
      */
     public void register(String permission, String description) {
-        this.pm.addPermission(new Permission(permission, description));
+        Permission perm = new Permission(permission, description);
+        perm.setDefault(PermissionDefault.FALSE);
+        this.pm.addPermission(perm);
     }
 }

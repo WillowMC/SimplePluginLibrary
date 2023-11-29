@@ -67,6 +67,7 @@ public class BukkitCommand implements CommandExecutor, TabCompleter {
         cmd.setDescription(command.getDescription());
         cmd.setUsage(command.getUsage());
         cmd.setAliases(Arrays.asList(command.getAliases()));
+        cmd.setPermission(cmd.getName());
         return cmd;
     }
 }
