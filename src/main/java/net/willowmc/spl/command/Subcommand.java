@@ -88,6 +88,7 @@ public class Subcommand {
      * @return successful execution
      */
     public boolean execute(CommandContext context) {
+        if (!context.getPlayer().hasPermission(this.name)) return true;
         for (Subcommand subcommand : subcommands) {
             if (context.args().length > depth && context.args()[depth].equals(subcommand.name)) {
                 return subcommand.execute(context);
@@ -105,6 +106,7 @@ public class Subcommand {
      */
     public List<String> doCompletion(CommandContext ctx, int depth) {
         if (depth >= this.depth && ctx.args()[this.depth - 1].equals(getName())) {
+            if (!ctx.getPlayer().hasPermission(this.name)) return null;
             if (!hasSubcommand(ctx.args()[this.depth])) {
                 List<String> tabCompletion = new ArrayList<>();
                 if (depth == this.depth + 1) {
